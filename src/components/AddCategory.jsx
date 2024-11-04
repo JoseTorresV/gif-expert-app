@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
 export const AddCategory = ({ onNewCategory }) => {
-  //   const { setCategories } = onAddCategories;
 
-  const [inputValue, setInputValue] = useState("Dragon ball");
+  const [inputValue, setInputValue] = useState("Dragon Ball Z");
 
   const onInputChange = ({ target }) => {
     const { value } = target;
-    console.log(value);
+    // console.log(value);
     setInputValue(value);
   };
 
@@ -15,9 +14,7 @@ export const AddCategory = ({ onNewCategory }) => {
     event.preventDefault();
     if (inputValue.trim().length <= 1) return;
 
-    // console.log(inputValue);
-    // setCategories((categories) => [inputValue, ...categories]);
-    onNewCategory(inputValue.trim())
+    onNewCategory(inputValue.trim());
     setInputValue("");
   };
 
