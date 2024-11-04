@@ -1,15 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { GIFExpertApp } from "./GIFExpertApp";
+import { GifExpertApp } from "./GifExpertApp";
 
 import './styles.css'
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* Titulo */}
-    <GIFExpertApp />
-    {/* input */}
-    {/* Listado de gifs */}
-    {/*gifItem */}
+    <GifExpertApp />
   </StrictMode>
 );
