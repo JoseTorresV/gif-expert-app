@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AddCategory, GifGrid } from "./components";
 
-export const GIFExpertApp = () => {
+export const GifExpertApp = () => {
   const [categories, setCategories] = useState(["Dragon Ball Z"]);
 
   const onAddCategory = (newCategory) => {
