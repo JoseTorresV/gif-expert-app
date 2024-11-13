@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 export const AddCategory = ({ onNewCategory }) => {
-
+  // const [inputValue, setInputValue] = useState("Dragon Ball Z");
   const [inputValue, setInputValue] = useState("Dragon Ball Z");
 
   const onInputChange = ({ target }) => {
@@ -19,7 +20,8 @@ export const AddCategory = ({ onNewCategory }) => {
   };
 
   return (
-    <form onSubmit={onSubmitChange}>
+    // Qui uso il arial-label per poter leggere il contenuto del form nel test
+    <form onSubmit={onSubmitChange} aria-label="form">
       <input
         type="text"
         placeholder="Buscar gifs"
@@ -28,4 +30,8 @@ export const AddCategory = ({ onNewCategory }) => {
       />
     </form>
   );
+};
+
+AddCategory.propTypes = {
+  onNewCategory: PropTypes.func.isRequired,
 };
